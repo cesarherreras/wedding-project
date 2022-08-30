@@ -1,0 +1,17 @@
+//Button event -- Displays invitation
+invitationBtn.addEventListener('click', () => {
+    envelopeBody.classList.add('inactive');
+    invitationTemplate.classList.remove('inactive');
+})
+
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        lidClosed.style.transform = "rotateX(90deg)";
+        lidClosed.style.transitionDelay = "0s";
+        lidOpened.style.transform = "rotateX(180deg)";
+        lidOpened.style.transitionDelay = "0.25s";
+        letter.style.transform = "translateY(-50px)";
+        letter.style.transitionDelay = "0.5s";
+        console.log(lidClosed,lidOpened,letter);
+    }, 2000);
+});

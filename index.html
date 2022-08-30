@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Rokkitt:wght@200&family=Euphoria+Script&display=swap" rel="stylesheet" />
+    <link link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Invitation</title>
+</head>
+<body>
+
+    <!-- Initial Section -->
+    <section class="envelope-body">
+        <div class="lid closed"></div>
+        <div class="lid opened"></div>
+        <div id="envelope-cover"></div>
+        <div id="letter">
+            <p>¡Bienvenidos!</p>
+            <p id="heart">💚</p>
+        </div>
+        <p id="wedding-names">Vane & Juan Pa</p>
+        <button class="btn-invitation">Ver invitación</button>
+    </section>
+
+    <!-- Invitation -->
+    <section class="invitation-complete inactive">
+        <header class="header">
+            <p>Por favor envíe su respuesta para este evento</p>
+            <button>RESPONDER ENCUESTA</button>
+        </header>
+        <section class="invitation-background">
+            <article class="invitation-content">
+                <div class="title">
+                    <p>Vane & Juan Pa</p>
+                </div>
+                <div class="parents">
+                    <p class="one">EN COMPAÑÍA DE NUESTROS PADRES</p>
+                    <p class="two">
+                        ROBERTO SANDOVAL <br> 
+                        & AYDA MENESES 
+                    </p>
+                    <p class="three">
+                        JORGE PABÓN +<br>
+                        & LUISA GONZÁLEZ
+                    </p>
+                    <p id="message">Queremos invitarlos a celebrar nuestra boda</p>
+                </div>
+                <div class="information">
+                    <p>DICIEMBRE 3 2022</p>
+                    <p><strong>EUCARISTÍA:</strong> CAPILLA SAN JOSÉ, SEMINARIO MAYOR FLORIDABLANCA</p>
+                    <p>HORA: 4:00 PM</p>
+                    <p id="reception"><strong>RECEPCIÓN:</strong> HACIENDA LA VENTA</p>
+                    <p>KM 3 VÍA PIEDECUESTA - BOGOTÁ</p>
+                    <p>HORA: 5:30 PM</p>
+                </div>
+                <div class="dress-code">
+                    <p id="dress-code-title">DRESS CODE</p>
+                    <p>Mujeres: VESTIDO LARGO PRIMAVERAL Y/O UNICOLOR - TENIS</p>
+                    <p>Hombres: CAMISA BLANCA/GUAYABERA Y PANTALÓN CAFÉ CLARO - TENIS</p>
+                </div>
+                <div class="phrase">
+                    <p>Lluvia de sobres</p>
+                </div>
+            </article>
+        </section>
+    </section>
+    <script src="./client/nodes.js"></script>
+    <script src="./client/index.js"></script>
+</body>
+</html>
