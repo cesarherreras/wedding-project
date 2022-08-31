@@ -22,8 +22,9 @@
         <div id="envelope-cover"></div>
         <div id="letter">
             <p>¡Bienvenidos!</p>
-            <p id="heart">💚</p>
+            <p id="heart">🧡</p>
         </div>
+        <div class="solution"></div>
         <p id="wedding-names">Vane & Juan Pa</p>
         <button class="btn-invitation">Ver invitación</button>
     </section>
@@ -32,7 +33,7 @@
     <section class="invitation-complete inactive">
         <header class="header">
             <p>Por favor envíe su respuesta para este evento</p>
-            <button>RESPONDER ENCUESTA</button>
+            <button id="open-survey">CONFIRMAR ASISTENCIA</button>
         </header>
         <section class="invitation-background">
             <article class="invitation-content">
@@ -69,6 +70,30 @@
                 </div>
             </article>
         </section>
+    </section>
+
+    <!-- Wedding survey -->
+    <section class="wedding-survey inactive">
+        <article class="wedding-form">
+            <h1 class="form title">FORMULARIO</h1>
+            <span class="survey-arrow">X</span>
+            <div class="form-one">
+                <p>Nombre</p>
+                <input type="text">
+                <p>Apellido</p>
+                <input type="text">
+                <p>Número de personas</p>
+                <input type="number" class="input-number">
+            </div>
+            <div class="form-two">
+                <input id="s1" type="checkbox" class="slider">
+                <label for="s1">Asistiré</label>
+                <input id="s2" type="checkbox" class="slider">
+                <label for="s2"> No asistiré</label>
+            </div>
+            <textarea class="form-three" rows="5" cols="50" placeholder="Mensaje adicional al organizador"></textarea>
+            <button class="form-btn">ENVIAR</button>
+        </article>
     </section>
     <script src="./client/nodes.js"></script>
     <script src="./client/index.js"></script>
