@@ -27,6 +27,13 @@ window.addEventListener('DOMContentLoaded', () => {
         lidOpened.style.transitionDelay = "0.25s";
         letter.style.transform = "translateY(-50px)";
         letter.style.transitionDelay = "0.5s";
-        console.log(lidClosed,lidOpened,letter);
     }, 2000);
+});
+
+//Close modal window after sending response
+modalButton.addEventListener('click', () => {
+    surveyTemplate.classList.add('inactive');
+    envelopeBody.classList.add('inactive');
+    invitationTemplate.classList.remove('inactive');
+    modal.close();
 });

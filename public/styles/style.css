@@ -300,6 +300,42 @@ input:checked + label {
     box-shadow: 0 3px var(--orange);
 }
 
+/*---------------- Modal window --------------------------------------- */
+#modal {
+    margin: auto;
+    font-family: var(--font-family-text);
+    padding: 3%;
+    border: var(--orange) solid 2px;
+}
+
+#modal-title, #modal-text {
+    margin-bottom: 2%;
+    text-align: start;
+}
+
+#modal-text {
+    font-size: large;
+}
+
+#modal .modal-btn {
+    border: 0;
+    border-radius: 5px;
+    color: #1f1a25;
+    font-family: "Muli", Arial, sans-serif;
+    text-transform: uppercase;
+    padding: 1%;
+    font-size: 1rem;
+    background-color: var(--light-orange);
+    box-shadow: 0 3px var(--orange);
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}
+
+#modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
 /*---------------- Invitation template ------------------------------- */
 .invitation-complete {
     height: 100vh;
@@ -510,6 +546,10 @@ input:checked + label {
     }
 
     .wedding-survey {
+        display: none;
+    }
+
+    #modal {
         display: none;
     }
 }

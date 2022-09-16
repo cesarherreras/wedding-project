@@ -79,9 +79,9 @@
             <span class="survey-arrow">X</span>
             <div class="form-one">
                 <p>Nombre</p>
-                <input type="text">
+                <input id="name" type="text">
                 <p>Apellido</p>
-                <input type="text">
+                <input id="lastname" type="text">
                 <p>Número de personas</p>
                 <input type="number" class="input-number">
             </div>
@@ -91,11 +91,20 @@
                 <input id="s2" type="checkbox" class="slider">
                 <label for="s2"> No asistiré</label>
             </div>
-            <textarea class="form-three" rows="5" cols="50" placeholder="Mensaje adicional al organizador"></textarea>
+            <textarea class="form-three" rows="5" cols="50" placeholder="Por favor indicar si es vegano/ vegetariano y si necesita servicio de transporte al lugar."></textarea>
             <button class="form-btn">ENVIAR</button>
         </article>
     </section>
+    <!-- Modal -->
+    <dialog id="modal">
+        <h2 id="modal-title">¡Muchas gracias por responder la encuesta!</h2>
+        <p id="modal-text">Recuerda que nuestro wedding planner, Samuel López, se estará comunicando contigo 15 días antes del evento.</p>
+        <button class="modal-btn">Cerrar</button>
+    </dialog>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./client/nodes.js"></script>
+    <script src="./client/extractData.js"></script>
     <script src="./client/index.js"></script>
 </body>
 </html>
