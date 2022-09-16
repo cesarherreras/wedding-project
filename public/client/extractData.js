@@ -32,7 +32,7 @@ confirmAssistance.addEventListener("change", (checkbox) => {
   });
 
 //Extracting data from inputs
-const formData = formButton.addEventListener('click', async () => {
+formButton.addEventListener('click', async () => {
     const specialChars = /[0-9`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     const nameCheck = specialChars.test(formName.value);
     const lastNameCheck = specialChars.test(formLastName.value);

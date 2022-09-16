@@ -36,4 +36,12 @@ modalButton.addEventListener('click', () => {
     envelopeBody.classList.add('inactive');
     invitationTemplate.classList.remove('inactive');
     modal.close();
+    formName.value = '';
+    formLastName.value = '';
+    personsNumber.value = '';
+    comments.value = '';
+    denyAssistance.checked = false;
+    confirmAssistance.checked = false; 
+    confirmAssistance.disabled = false;
+    denyAssistance.disabled = false;
 });
