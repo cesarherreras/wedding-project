@@ -1,7 +1,7 @@
 const express = require('express');
 const routerApi = require('./routes/routes');
 const bodyParser = require('body-parser');
-const dbConnection = require('./mongoDb');
+const dbConnection = require('./db/mongoDb');
 const { config } = require('./config/config');
 const cors = require('cors');
 
