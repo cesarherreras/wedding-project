@@ -20,7 +20,6 @@ closeSurvey.addEventListener('click', () => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('Entra al cargar')
     setTimeout(() => {
         lidClosed.style.transform = "rotateX(90deg)";
         lidClosed.style.transitionDelay = "0s";

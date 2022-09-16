@@ -1,5 +1,3 @@
-import axios from "axios";
-
 //Axios instance
 const api = axios.create({
     baseURL: '/',
@@ -8,29 +6,14 @@ const api = axios.create({
     }
 });   
 
-async function extract(formData: any) {
+async function extract(formData) {
     const data  = await api.post('form', formData);
     console.log(data)
     return data;
 }
 
-type dataType = {
-    name: any,
-    lastName: any,
-    personsNumber: any,
-    comments: any,
-    confirmAssitance: any
-}
-
-let data: dataType = {
-    confirmAssitance: null,
-    name: null,
-    lastName: null,
-    personsNumber: null,
-    comments: null
-};
-
-confirmAssistance.addEventListener("change", (checkbox: any) => {
+let data = {};
+confirmAssistance.addEventListener("change", (checkbox) => {
     if (checkbox.target.checked) {
         denyAssistance.disabled = true;
         data.confirmAssitance = true;
@@ -39,7 +22,7 @@ confirmAssistance.addEventListener("change", (checkbox: any) => {
     }
   });
 
-  denyAssistance.addEventListener("change", (checkbox: any) => {
+  denyAssistance.addEventListener("change", (checkbox) => {
     if (checkbox.target.checked) {
         confirmAssistance.disabled = true;
         data.confirmAssitance = false;
@@ -49,7 +32,7 @@ confirmAssistance.addEventListener("change", (checkbox: any) => {
   });
 
 //Extracting data from inputs
-formButton.addEventListener('click', async () => {
+const formData = formButton.addEventListener('click', async () => {
     const specialChars = /[0-9`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     const nameCheck = specialChars.test(formName.value);
     const lastNameCheck = specialChars.test(formLastName.value);
@@ -72,7 +55,7 @@ formButton.addEventListener('click', async () => {
         comments: comments.value,
     }
     await extract(data || {});
-    modal.showModal();
+    await modal.showModal();
 });
 
 
