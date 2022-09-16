@@ -1,11 +1,11 @@
-const Model = require('../models/form.model');
+import Model from '../models/form.model'
 
 class FormService {
   constructor() {}
 
-  async createGuest(data) {
-    // const guests = new Model(data);
-    // await guests.save();
+  async createGuest(data: any) {
+    const guests = new Model(data);
+    await guests.save();
     return data;
   }
 
@@ -26,4 +26,4 @@ class FormService {
   }
 }
 
-module.exports = FormService;
+export default FormService;

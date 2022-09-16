@@ -1,14 +1,14 @@
 const express = require('express');
-const FormService = require('../services/service.form');
+import FormService from '../services/service.form';
 
 const router = express.Router();
 const service = new FormService();
 
 router.post('/',
-  async (req, res, next) => {
+  async (req: any, res: any, next: any) => {
   try {
     const data = req.body;
-    guests = await service.createGuest(data);
+    const guests = await service.createGuest(data);
     res.json(guests);
   } catch (error) {
     throw new Error('Invalid data');
@@ -16,9 +16,9 @@ router.post('/',
 });
 
 router.get('/',
-  async (req, res, next) => {
+  async (req: any, res: any, next: any) => {
   try {
-    guests = await service.getGuest();
+    const guests = await service.getGuest();
     res.json(guests);
   } catch (error) {
     throw new Error('Invalid data');
@@ -26,13 +26,13 @@ router.get('/',
 });
 
 router.get('/guest-assistance',
-  async (req, res, next) => {
+  async (req: any, res: any, next: any) => {
   try {
-    guests = await service.listGuestconfirmed();
+    const guests = await service.listGuestconfirmed();
     res.json(guests);
   } catch (error) {
     throw new Error('Invalid data');
   }
 });
 
-module.exports = router;
+export default router;
